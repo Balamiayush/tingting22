@@ -48,16 +48,17 @@
   </div>
 </section>
 
- <section class="page2 px-4 py-10">
+ <section class="page2 gap-20
+ ">
   <!-- Box 1 -->
-  <div class="box relative flex flex-col lg:flex-row justify-center items-center lg:gap-[12%] w-full mb-16 min-h-[300px]">
+  <div class="box relative flex flex-col lg:flex-row justify-center items-center lg:gap-[12%] w-full  min-h-[300px]">
     <!-- Logo -->
     <div class="logo z-10">
       <img src="imgs/logo.png" alt="Logo" class="h-[150px] lg:h-[200px]" />
     </div>
 
     <!-- Content -->
-    <div class="content w-full lg:w-[34%] leading-[1.8] text-[16px] sm:text-[18px] lg:text-[20px] flex flex-col justify-center gap-4 text-center lg:text-left z-10">
+    <div class="content p-4 w-full lg:w-[34%] leading-[1.8] text-[16px] sm:text-[18px] lg:text-[20px] flex flex-col justify-center gap-4 text-center lg:text-left z-10">
       <p>
         Digital Nepal Conclave 2025 focuses on “Digital Synergy: Transforming Governance, Economy & Society.” It’s about connecting ideas, technology, and people to build an inclusive future.
       </p>
@@ -79,8 +80,8 @@
       <img src="imgs/Vector.png" alt="Vector  relative" class="w-[200px] scale-[1.5]" />
     </div>
 
-    <!-- Content -->
-    <div class="content w-full lg:w-[34%] leading-[1.8] text-[16px] sm:text-[18px] lg:text-[20px] flex flex-col justify-center gap-4  text-center lg:text-left  z-10">
+    <!-- Content p-4 -->
+    <div class="content   p-4 w-full lg:w-[34%] leading-[1.8] text-[16px] sm:text-[18px] lg:text-[20px] flex flex-col justify-center gap-4  text-center lg:text-left  z-10">
       <p>
         For us at Ting Ting, that future must include a communication channel that reaches every Nepali, not just the digitally fluent.
       </p>
@@ -163,7 +164,7 @@ function circle() {
   let tl = gsap.timeline({
     scrollTrigger: {
       trigger: ".page3",
-      start: "-10% top",
+      start: "top top",
       end: "",
       // markers: 1,
       scrub: true,
