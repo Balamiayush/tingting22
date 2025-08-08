@@ -214,5 +214,7 @@ body {
     width: 300px;
     height: 300px;
   }
-    
+  .Vector{
+    width: 200px;
+  }
 }
