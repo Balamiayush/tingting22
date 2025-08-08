@@ -1,0 +1,218 @@
+
+@font-face {
+    font-family: 'Aileron Regular';
+    src: url('./font/Aileron-Regular.otf');
+}
+
+@font-face {
+    font-family: 'Aileron UltraLight';
+    src: url('/font/Aileron-UltraLight.otf');
+}
+
+@font-face {
+    font-family: 'Aileron UltraLight Italic';
+    src: url('/font/Aileron-UltraLightItalic.otf');
+}
+
+@font-face {
+    font-family: 'Aileron Thin';
+    src: url('/font/Aileron-Thin.otf');
+}
+
+@font-face {
+    font-family: 'Aileron Thin Italic';
+    src: url('/font/Aileron-ThinItalic.otf');
+}
+
+@font-face {
+    font-family: 'Aileron Light';
+    src: url('/font/Aileron-Light.otf');
+}
+
+@font-face {
+    font-family: 'Aileron Light Italic';
+    src: url('/font/Aileron-LightItalic.otf');
+}
+
+@font-face {
+    font-family: 'Aileron SemiBold';
+    src: url('/font/Aileron-SemiBold.otf');
+}
+
+@font-face {
+    font-family: 'Aileron SemiBold Italic';
+    src: url('/font/Aileron-SemiBoldItalic.otf');
+}
+
+@font-face {
+    font-family: 'Aileron Bold';
+    src: url('/font/Aileron-Bold.otf');
+}
+
+@font-face {
+    font-family: 'Aileron Bold Italic';
+    src: url('/font/Aileron-BoldItalic.otf');
+}
+
+@font-face {
+    font-family: 'Aileron Heavy';
+    src: url('/font/Aileron-Heavy.otf');
+}
+
+@font-face {
+    font-family: 'Aileron Heavy Italic';
+    src: url('/font/Aileron-HeavyItalic.otf');
+}
+
+@font-face {
+    font-family: 'Aileron Black';
+    src: url('/font/Aileron-Black.otf');
+}
+
+@font-face {
+    font-family: 'Aileron Black Italic';
+    src: url('/font/Aileron-BlackItalic.otf');
+}
+
+.w-icon-slider-right:before {
+    content: ""
+}
+
+.w-icon-slider-left:before {
+    content: ""
+}
+
+.w-icon-nav-menu:before {
+    content: ""
+}
+
+.w-icon-arrow-down:before,
+.w-icon-dropdown-toggle:before {
+    content: ""
+}
+
+.w-icon-file-upload-remove:before {
+    content: ""
+}
+
+.w-icon-file-upload-icon:before {
+    content: ""
+}
+:root {
+    --textColor: linear-gradient(90deg, #F04F23 0%, #2E3192 65.38%);
+}
+
+* {
+
+    box-sizing: border-box;
+    
+}
+
+html {
+    height: 100%
+}
+
+body {
+    color: #333;
+    overflow-x: hidden;
+   
+    min-height: 100%;
+    margin: 0;
+    font-family: 'Aileron Regular';
+}
+.heading {
+  background:var(--textColor);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: 'Aileron Bold';
+  font-weight: 900;
+}
+.heading p{
+    font-family: 'Aileron Bold';
+      font-weight: 900;
+}
+.page2{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+
+}
+.circle-wrapper {
+  position: relative;
+  width: 500px;
+  height: 500px;
+  margin: 80px auto;
+}
+
+.circle {
+  position: absolute;
+  border-radius: 50%;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+ 
+}
+
+.circle-1 {
+  width: 100%;
+  height: 100%;
+  background-color: #2d2b31; /* dark gray */
+  z-index: 1;
+}
+
+.circle-2 {
+  width: 75%;
+  height: 75%;
+  background-color: #f6491d; /* orange */
+  z-index: 2;
+}
+
+.circle-3 {
+  width: 50%;
+  height: 50%;
+  background-color: #d9f74b; /* lime green */
+  z-index: 3;
+}
+.line{
+    width: 80%;
+    height: 1.5px;
+    background: #ECA408;
+    position: relative;
+    left: 100%;
+
+    transform: translateX(-50%);
+    top: 20%;
+
+}
+.line-3{
+    width: 200px;
+     left: 120%;
+     top: 50%;
+}
+.footertext2{
+
+    background: linear-gradient(90deg, #807CCA 35.1%, #25D6C1 71.63%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  
+
+}
+.btn{
+    background: linear-gradient(90deg, #2E3192 0%, #F04F23 100%);
+    
+}
+@media (max-width: 1000px) {
+
+  .hero .heading{
+    font-size:2.5rem;
+    line-height: normal;
+  }
+  .circle-wrapper{
+    width: 300px;
+    height: 300px;
+  }
+    
+}
