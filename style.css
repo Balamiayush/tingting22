@@ -46,22 +46,22 @@
 
 @font-face {
     font-family: 'Aileron Bold';
-    src: url('/font/Aileron-Bold.otf');
+    src: url('./font/Aileron-Bold.otf');
 }
 
 @font-face {
     font-family: 'Aileron Bold Italic';
-    src: url('/font/Aileron-BoldItalic.otf');
+    src: url('./font/Aileron-BoldItalic.otf');
 }
 
 @font-face {
     font-family: 'Aileron Heavy';
-    src: url('/font/Aileron-Heavy.otf');
+    src: url('./font/Aileron-Heavy.otf');
 }
 
 @font-face {
     font-family: 'Aileron Heavy Italic';
-    src: url('/font/Aileron-HeavyItalic.otf');
+    src: url('./font/Aileron-HeavyItalic.otf');
 }
 
 @font-face {
@@ -125,6 +125,7 @@ body {
 .heading {
   background:var(--textColor);
   font-family: 'Aileron Bold';
+  
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
