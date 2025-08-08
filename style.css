@@ -122,9 +122,9 @@ body {
 }
 .heading {
   background:var(--textColor);
+  font-family: 'Aileron Bold';
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-family: 'Aileron Bold';
 }
 .heading p{
     font-family: 'Aileron Bold';
