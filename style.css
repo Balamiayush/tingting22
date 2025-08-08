@@ -125,7 +125,6 @@ body {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-family: 'Aileron Bold';
-  font-weight: 900;
 }
 .heading p{
     font-family: 'Aileron Bold';
@@ -193,7 +192,6 @@ body {
      top: 50%;
 }
 .footertext2{
-
     background: linear-gradient(90deg, #807CCA 35.1%, #25D6C1 71.63%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
