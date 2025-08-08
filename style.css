@@ -100,10 +100,11 @@ body {
 
 .heading {
   background:var(--textColor);
-  font-family: 'Aileron Bold';
+  font-weight: 700;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
 
 .page2{
     width: 100%;
