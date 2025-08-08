@@ -89,14 +89,16 @@ html {
 }
 
 body {
-    color: #333;
     overflow-x: hidden;
+    background: #F2F2F7;
    
     min-height: 100%;
     margin: 0;
     font-family: 'Aileron Regular';
     font-family: 'Aileron', sans-serif;
 }
+
+
 
 .heading {
   background:var(--textColor);
@@ -191,5 +193,8 @@ body {
   }
   .Vector{
     width: 200px;
+  }
+  .phoneimg{
+    top: 60%;
   }
 }
