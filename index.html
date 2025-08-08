@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.cdnfonts.com/css/aileron" rel="stylesheet">
     <title>Document</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="stylesheet" href="style.css" />
@@ -26,8 +27,8 @@
   </div>
 
   <!-- Center Content -->
-  <div class="heroContainer h-full   gap-2 w-full flex flex-col items-center justify-center px-4 sm:px-6">
-    <div class="flex flex-col items-center justify-center gap-4 text-center">
+  <div class="heroContainer h-full   w-full flex flex-col items-center justify-center px-4 sm:px-6">
+    <div class="flex flex-col items-center justify-center  text-center gap-6">
       <p
         class="heading  leading-tight text-[2rem] sm:text-[2.5rem] md:text-[3rem] lg:text-[4rem] leading-[120%]"
       >
@@ -41,7 +42,7 @@
     </div>
 
     <!-- Logos Row -->
-    <div class="logos flex gap-6 sm:gap-8 items-center justify-center mt-6 flex-wrap">
+    <div class="logos flex gap-10  items-center justify-center  flex-wrap">
       <img src="/imgs/digitaltingting.png" alt="" class="w-[120px] sm:w-[150px]" />
       <img src="/imgs/tingtinglogo.png" alt="" class="w-[120px] sm:w-[150px]" />
     </div>
@@ -50,9 +51,9 @@
 
   <section class="page2 px-4 py-10 ">
   <!-- Box 1 -->
-  <div class="box flex flex-col lg:flex-row justify-center items-center  lg:gap-[110px] w-full mb-16">
+  <div class="box flex flex-col lg:flex-row justify-center items-center  lg:gap-[12%] w-full mb-16">
     <div class="logo">
-      <img src="./imgs/logo.png" alt="" class="h-[120px] sm:h-[150px] lg:h-[200px]" />
+      <img src="./imgs/logo.png" alt="" class="sm:h-[150px] lg:h-[200px]" />
     </div>
     <div class="content w-full lg:w-[34%] leading-[1.8] text-[16px] sm:text-[18px] lg:text-[20px] flex flex-col justify-center gap-4 text-center lg:text-left">
       <p>
@@ -65,9 +66,9 @@
   </div>
 
   <!-- Box 2 -->
-  <div class="box flex flex-col lg:flex-row justify-center items-center gap-5 lg:gap-[13%] w-full">
+  <div class="box flex flex-col lg:flex-row justify-center items-center gap-5 lg:gap-[5%] w-full">
     <div class="logo">
-      <img src="./imgs/tingtinglogo.png" alt="" class="w-[160px] sm:w-[200px] h-[60px] " />
+      <img src="./imgs/Vector.png" alt="" class="" />
     </div>
     <div class="content w-full lg:w-[34%] leading-[1.8] text-[16px] sm:text-[18px] lg:text-[20px] flex flex-col justify-center gap-4 text-center lg:text-left">
       <p>
@@ -86,7 +87,7 @@
   <div class="circle circle-1">
     <div class=" line lg:block hidden line-1"></div>
     <p class="absolute left-[145%] lg:block hidden text-[20px] w-full top-20 ">access to telephone</p>
-    <p class="  text-center lg:hidden block mt-10 text-white ">access to telephone</p>
+    <p class="  text-center lg:hidden block mt-10 text-white ">have access to smartphone</p>
    
   </div>
   <div class="circle circle-2">
@@ -149,7 +150,6 @@ function circle() {
       trigger: ".page3",
       start: "top top",
       end: "",
-      markers: true,
       scrub: true,
       pin: true
     }

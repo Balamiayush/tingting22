@@ -119,7 +119,9 @@ body {
     min-height: 100%;
     margin: 0;
     font-family: 'Aileron Regular';
+    font-family: 'Aileron', sans-serif;
 }
+
 .heading {
   background:var(--textColor);
   font-family: 'Aileron Bold';
