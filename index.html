@@ -8,7 +8,76 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+       <section class="hero w-full h-screen ">
+  <!-- Background Image -->
+  <img
+    src="./imgs/heroimg.png"
+    alt=""
+    class="absolute z-[-1]  mx-auto   w-[100%] h-[100vh] object-cover"
+  />
+ 
+  <!-- Logo Top Left -->
+  <div class="logo">
+    <img
+      src="./imgs/tingtinglogo.png"
+      alt=""
+      class="p-4 sm:p-6 md:p-8 object-cover max-w-[150px] sm:max-w-[200px]"
+    />
+  </div>
 
+  <!-- Center Content -->
+  <div class="heroContainer mt-10 sm:mt-16 gap-2 w-full flex flex-col items-center justify-center px-4 sm:px-6">
+    <div class="flex flex-col items-center justify-center gap-4 text-center">
+      <p
+        class="heading font-bold leading-tight text-[2rem] sm:text-[2.5rem] md:text-[3rem] lg:text-[4rem] leading-[120%]"
+      >
+        One More Brick in <br />
+        Digital Nepal’s Future
+      </p>
+      <p class="text-base sm:text-lg md:text-xl text-[#73737D] max-w-[90%]">
+        From Voice to Vision — Ting Ting at Digital Nepal Conclave 2025
+      </p>
+    </div>
+
+    <!-- Logos Row -->
+    <div class="logos flex gap-6 sm:gap-8 items-center justify-center mt-6 flex-wrap">
+      <img src="/imgs/digitaltingting.png" alt="" class="w-[120px] sm:w-[150px]" />
+      <img src="/imgs/tingtinglogo.png" alt="" class="w-[120px] sm:w-[150px]" />
+    </div>
+  </div>
+</section>
+
+  <section class="page2 px-4 py-10 ">
+  <!-- Box 1 -->
+  <div class="box flex flex-col lg:flex-row justify-center items-center gap-12 lg:gap-[110px] w-full mb-16">
+    <div class="logo">
+      <img src="./imgs/logo.png" alt="" class="h-[120px] sm:h-[150px] lg:h-[200px]" />
+    </div>
+    <div class="content w-full lg:w-[34%] leading-[1.8] text-[16px] sm:text-[18px] lg:text-[20px] flex flex-col justify-center gap-4 text-center lg:text-left">
+      <p>
+        Digital Nepal Conclave 2025 focuses on “Digital Synergy: Transforming Governance, Economy & Society.” It’s about connecting ideas, technology, and people to build an inclusive future.
+      </p>
+      <div class="px-4 py-2 w-fit mx-auto lg:mx-0 text-center bg-[#2B2C31] text-white rounded-[12px] cursor-pointer">
+        <a href="https://www.tingting.io" target="_blank">Know More</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Box 2 -->
+  <div class="box flex flex-col lg:flex-row justify-center items-center gap-12 lg:gap-[80px] w-full">
+    <div class="logo">
+      <img src="./imgs/tingtinglogo.png" alt="" class="w-[160px] sm:w-[200px] h-[60px] object-cover" />
+    </div>
+    <div class="content w-full lg:w-[34%] leading-[1.8] text-[16px] sm:text-[18px] lg:text-[20px] flex flex-col justify-center gap-4 text-center lg:text-left">
+      <p>
+        For us at Ting Ting, that future must include a communication channel that reaches every Nepali, not just the digitally fluent.
+      </p>
+      <div class="px-4 py-2 w-fit mx-auto lg:mx-0 text-center bg-[#2B2C31] text-white rounded-[12px] cursor-pointer">
+        <a href="https://www.tingting.io" target="_blank">Know More</a>
+      </div>
+    </div>
+  </div>
+</section>
 
     <section class="page3  w-full lg:h-screen relative lg:p-10 ">
       <p class="lg:text-[32px] text-[20px]   text-[#73737D] text-center lg:top-0 relative top-20 ">We’re not building for the privileged few — but for the unheard majority.</p>
@@ -33,7 +102,7 @@
 
     </section>
     <section class="page4 w-full  lg:h-screen  px-6 md:px-16 py-12 mt-[100px] flex flex-col justify-center items-center text-white text-center gap-8">
-  <p id="split-target" class="text-[20px] leading-[32px] sm:text-[28px] sm:leading-[38px] md:text-[36px] md:leading-[48px] lg:text-[48px] lg:leading-[60px] footertext max-w-[90ch] text-[#706F76]">
+  <p id="split-target" class="text-[20px] leading-[32px] sm:text-[28px] sm:leading-[38px] md:text-[36px] md:leading-[48px] lg:text-[48px] lg:leading-[60px] footertext max-w-[90ch] lg:text-[#706F76] text-white">
     That’s why we believe telephony is the best channel for building future of digital Nepal – it’s universal, familiar, and accessible to all. And voice? It’s the most natural interface humans have ever known.
   </p>
 
@@ -140,19 +209,6 @@ window.addEventListener("load", () => {
       }
     });
   });
-
-    gsap.to(split.words, {
-      color: "#fff",
-      stagger: 0.1,
-      scrollTrigger: {
-        trigger: ".page4",
-        start: "50% center",
-        end: "",
-        scrub: 1,
-        pin: true,
-        markers: true
-      }
-    });
 });
 
   </script>
