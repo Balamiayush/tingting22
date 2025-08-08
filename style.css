@@ -197,4 +197,8 @@ body {
   .phoneimg{
     top: 60%;
   }
+  .page2{
+    position: relative;
+    top: 15vw;
+  }
 }
