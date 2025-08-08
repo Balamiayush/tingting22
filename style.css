@@ -46,7 +46,7 @@
 
 @font-face {
     font-family: 'Aileron Bold';
-    src: url('./font/Aileron-Bold.otf');
+    src: url('font/Aileron-Bold.otf');
 }
 
 @font-face {
@@ -74,30 +74,6 @@
     src: url('/font/Aileron-BlackItalic.otf');
 }
 
-.w-icon-slider-right:before {
-    content: ""
-}
-
-.w-icon-slider-left:before {
-    content: ""
-}
-
-.w-icon-nav-menu:before {
-    content: ""
-}
-
-.w-icon-arrow-down:before,
-.w-icon-dropdown-toggle:before {
-    content: ""
-}
-
-.w-icon-file-upload-remove:before {
-    content: ""
-}
-
-.w-icon-file-upload-icon:before {
-    content: ""
-}
 :root {
     --textColor: linear-gradient(90deg, #F04F23 0%, #2E3192 65.38%);
 }
@@ -125,14 +101,10 @@ body {
 .heading {
   background:var(--textColor);
   font-family: 'Aileron Bold';
-  
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-.heading p{
-    font-family: 'Aileron Bold';
-      font-weight: 900;
-}
+
 .page2{
     width: 100%;
     height: 100vh;
