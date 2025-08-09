@@ -103,7 +103,7 @@ ScrollTrigger.matchMedia({
     let tl = gsap.timeline({
       scrollTrigger: {
         trigger: ".page3",
-        start: "20% top",
+        start: "10% top",
         end: "bottom bottom",
         scrub: 1.5, 
         pin: true,
@@ -129,11 +129,11 @@ ScrollTrigger.matchMedia({
       ease: "back.out(1.7)" 
     }, "+=0.5")
     .to(".circle-1", { 
-      scale: 3,
+      scale: 4.2,
       duration: 2,
       ease: "linear" 
     }).to("body",{
-      backgroundColor: "#2d2b31"
+      // backgroundColor: "#2d2b31"
     })
   }
 });

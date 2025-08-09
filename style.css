@@ -298,6 +298,13 @@ body {
 
 
 @media (max-width: 800px) {
+    .page3{
+        height: 80vh;
+    }
+    .Vector2{
+        bottom: 10%;
+    }
+    
     
   .footer {
         /* padding-top: 8px; */
