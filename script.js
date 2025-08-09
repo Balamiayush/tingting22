@@ -34,7 +34,7 @@ ScrollTrigger.matchMedia({
 
     // Animate circles with staggered timing
     tl.from(".circle-1", { 
-      // scale: 0, 
+      scale: 0, 
       duration: 1.5,
       ease: "back.out(1.7)" // Nice bounce effect
     })
@@ -45,11 +45,10 @@ ScrollTrigger.matchMedia({
     }, "-=0.5")
     .from(".text-1", { 
       opacity: 0, 
-      y: 20,
       duration: 0.8 
     }, "-=0.3")
     .from(".circle-2", { 
-      // scale: 0,
+      scale: 0,
       duration: 1.5,
       ease: "back.out(1.7)" 
     }, "+=0.3")
@@ -60,11 +59,11 @@ ScrollTrigger.matchMedia({
     }, "-=0.5")
     .from(".text-2", { 
       opacity: 0, 
-      y: 20,
+      y: 10,
       duration: 0.8 
     }, "-=0.3")
     .from(".circle-3", { 
-      // scale: 0, 
+      scale: 0, 
       duration: 1.5,
       ease: "back.out(1.7)" 
     }, "+=0.3")
@@ -75,7 +74,7 @@ ScrollTrigger.matchMedia({
     }, "-=0.5")
     .from(".text-3", { 
       opacity: 0, 
-      y: 20,
+      y: 10,
       duration: 0.8 
     }, "-=0.3")
     // Final animation with smoother transitions
@@ -95,6 +94,8 @@ ScrollTrigger.matchMedia({
       ease: "power1.out" 
     }, "-=1.5").to("body",{
       backgroundColor: "#2d2b31"
+    }).to(".circle p",{
+      color: "#fff"
     })
   },
 
@@ -114,17 +115,17 @@ ScrollTrigger.matchMedia({
     });
 
     tl.from(".circle-1", { 
-      // scale: 0,  
+      scale: 0,  
       duration: 1.5,
       ease: "back.out(1.7)" 
     })
     .from(".circle-2", { 
-      // scale: 0, 
+      scale: 0, 
       duration: 1.5,
       ease: "back.out(1.7)" 
     }, "+=0.5")
     .from(".circle-3", { 
-      // scale: 0, 
+      scale: 0, 
       duration: 1.5,
       ease: "back.out(1.7)" 
     }, "+=0.5")
