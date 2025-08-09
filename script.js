@@ -156,10 +156,10 @@ ScrollTrigger.matchMedia({
       ease: "power3.out",
       scrollTrigger: {
         trigger: ".page4",
-        start: "-20% top",
+        start: "-10% top",
         scrub: true,
         pin: true,
-        markers: 1
+        // markers: 1
       }
     });
   }
