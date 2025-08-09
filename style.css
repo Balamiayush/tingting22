@@ -335,6 +335,44 @@ body {
         flex-flow: column;
         gap: 20px;
     }
+    
+    
+.box.footer-cta-container {
+    padding-top: 130px;
+    padding-bottom: 130px
+}
+
+.box.footer-container {
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    flex-flow: row;
+    justify-content: space-between;
+    display: block
+}
+
+.w-container {
+    max-width: 940px;
+    margin-left: auto;
+    margin-right: auto
+}
+
+.w-container:before,
+.w-container:after {
+    content: " ";
+    grid-area: 1/1/2/2;
+    display: table
+}
+
+.w-container:after {
+    clear: both
+}
+
+.w-container .w-row {
+    margin-left: -10px;
+    margin-right: -10px
+}
+
+
         .text-block-9 {
         font-size: 18px;
         line-height: 18px;

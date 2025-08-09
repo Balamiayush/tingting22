@@ -133,10 +133,13 @@ ScrollTrigger.matchMedia({
       duration: 3 
     }, "+=0.5")
     .to(".circle-1", { 
-      scale: 4.2, 
+      scale: 5, 
       duration: 10, // ⬅ slower expansion
       ease: "power1.inOut" 
-    }, "+=1");
+    }, "+=1").to(".circle p",{
+      opacity: 0
+      
+    })
 }
 
 });
