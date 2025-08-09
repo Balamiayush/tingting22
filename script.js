@@ -79,7 +79,7 @@ ScrollTrigger.matchMedia({
     }, "-=0.3")
     // Final animation with smoother transitions
     .to(".circle-1", { 
-      scale: 7, 
+      scale: 7.2, 
       duration: 6,
       ease: "linear" 
     })
