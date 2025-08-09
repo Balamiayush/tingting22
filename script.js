@@ -28,20 +28,20 @@ ScrollTrigger.matchMedia({
         anticipatePin: 1 // Prevents jitter
       },
       defaults: {
-        ease: "power2.inOut" // Consistent easing
+        ease: "linear" // Consistent easing
       }
     });
 
     // Animate circles with staggered timing
     tl.from(".circle-1", { 
-      scale: 0, 
+      // scale: 0, 
       duration: 1.5,
       ease: "back.out(1.7)" // Nice bounce effect
     })
     .from(".line-1", { 
       scaleX: 0, 
       duration: 0.8,
-      transformOrigin: "left center"
+      transformOrigin: "center center"
     }, "-=0.5")
     .from(".text-1", { 
       opacity: 0, 
@@ -49,7 +49,7 @@ ScrollTrigger.matchMedia({
       duration: 0.8 
     }, "-=0.3")
     .from(".circle-2", { 
-      scale: 0, 
+      // scale: 0,
       duration: 1.5,
       ease: "back.out(1.7)" 
     }, "+=0.3")
@@ -64,14 +64,14 @@ ScrollTrigger.matchMedia({
       duration: 0.8 
     }, "-=0.3")
     .from(".circle-3", { 
-      scale: 0, 
+      // scale: 0, 
       duration: 1.5,
       ease: "back.out(1.7)" 
     }, "+=0.3")
     .from(".line-3", { 
       scaleX: 0, 
       duration: 0.8,
-      transformOrigin: "left center"
+      transformOrigin: "center center"
     }, "-=0.5")
     .from(".text-3", { 
       opacity: 0, 
@@ -80,14 +80,14 @@ ScrollTrigger.matchMedia({
     }, "-=0.3")
     // Final animation with smoother transitions
     .to(".circle-1", { 
-      scale: 8, 
+      scale: 7, 
       duration: 6,
-      ease: "power2.in" 
+      ease: "linear" 
     })
     .to([".circle-2", ".circle-3"], { 
       scale: 0, 
       duration: 1.5,
-      ease: "power2.out" 
+      ease: "linear" 
     }, "-=1.5")
     .to([".line", ".circle-text"], { 
       opacity: 0, 
@@ -103,37 +103,38 @@ ScrollTrigger.matchMedia({
     let tl = gsap.timeline({
       scrollTrigger: {
         trigger: ".page3",
-        start: "top top",
+        start: "20% top",
         end: "bottom bottom",
-        scrub: 1.5, // Smoother on mobile
+        scrub: 1.5, 
         pin: true,
-        anticipatePin: 1
       },
       defaults: {
-        ease: "power2.inOut"
+        ease: "linear"
       }
     });
 
     tl.from(".circle-1", { 
-      scale: 0, 
+      // scale: 0,  
       duration: 1.5,
       ease: "back.out(1.7)" 
     })
     .from(".circle-2", { 
-      scale: 0, 
+      // scale: 0, 
       duration: 1.5,
       ease: "back.out(1.7)" 
     }, "+=0.5")
     .from(".circle-3", { 
-      scale: 0, 
+      // scale: 0, 
       duration: 1.5,
       ease: "back.out(1.7)" 
     }, "+=0.5")
     .to(".circle-1", { 
-      scale: 8, 
-      duration: 6,
-      ease: "power2.in" 
-    });
+      scale: 3,
+      duration: 2,
+      ease: "linear" 
+    }).to("body",{
+      backgroundColor: "#2d2b31"
+    })
   }
 });
 
@@ -141,6 +142,9 @@ ScrollTrigger.matchMedia({
 
 const splitTarget = document.getElementById("split-target");
 
+ScrollTrigger.matchMedia({
+  // Desktop only
+  "(min-width: 768px)": function () {
     const split = new SplitText(splitTarget, { type: "words" });    
   
   gsap.to(split.words, {
@@ -151,10 +155,12 @@ const splitTarget = document.getElementById("split-target");
       start: "",
       // end: "bottom bottom",
       scrub: true,
-      markers: true,
+      // markers: true,
       pin: true
     
     }
   });
+  }
+});
 
   
