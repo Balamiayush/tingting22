@@ -333,6 +333,7 @@ body {
     }
     .div-block-16 {
         flex-flow: column;
+        gap: 20px;
     }
         .text-block-9 {
         font-size: 18px;
@@ -346,6 +347,7 @@ body {
         width: 100%;
         font-size: 14px;
         line-height: 26px;
+
     }
   .hero .heading{
     font-size:2.5rem;
@@ -355,6 +357,64 @@ body {
     width:40vh;
     height: 40vh;
   }
+  
+    .box.nav-box,
+    .box.hero-section {
+        padding-left: 8px;
+        padding-right: 8px
+    }
+
+    .box.case-study-section {
+        padding-top: 24px;
+        padding-bottom: 24px
+    }
+
+    .box.why-ting-ting {
+        padding-top: 40px;
+        padding-bottom: 40px
+    }
+
+    .box.integrations {
+        flex-flow: column;
+        padding-top: 24px;
+        padding-bottom: 24px
+    }
+
+    .box.footer-cta-container {
+        background-image: none;
+        padding: 52px 10px
+    }
+
+    .box.footer-container {
+        padding-left: 0;
+        padding-right: 0
+    }
+
+
+    .footer-header {
+        width: 80%
+    }
+
+    .footer {
+        padding-top: 20px;
+        padding-bottom: 20px
+    }
+
+
+    .footer-list {
+        grid-column-gap: 1px;
+        grid-row-gap: 1px;
+        flex-flow: column;
+        flex: 0 auto;
+        padding-bottom: 0
+    }
+
+    .footer-link {
+        width: 100%;
+
+        font-size: 14px;
+        line-height: 26px
+    }
 }
 
 

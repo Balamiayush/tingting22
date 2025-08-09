@@ -2,9 +2,6 @@ gsap.registerPlugin(ScrollTrigger, SplitText, TextPlugin);
 
 // ✨ Enhanced Lenis for smoother scrolling
 const lenis = new Lenis({
-  lerp: 0.1, // Smoother scrolling
-  smoothWheel: true,
-  autoRaf: true
 });
 
 function raf(time) {
@@ -14,154 +11,154 @@ function raf(time) {
 requestAnimationFrame(raf);
 
 ScrollTrigger.matchMedia({
-  // Desktop only
   "(min-width: 768px)": function () {
-    // Main timeline with refined easing and timing
     let tl = gsap.timeline({
       scrollTrigger: {
         trigger: ".page3",
         start: "top top",
         end: "+=200%",
-        scrub: 1, // Smoother scrubbing
+        scrub: 1,
         pin: true,
-        markers: false, // Disabled for production
-        anticipatePin: 1 // Prevents jitter
+        anticipatePin: 1
       },
-      defaults: {
-        ease: "linear" // Consistent easing
-      }
+      defaults: { ease: "power2.out" }
     });
 
-    // Animate circles with staggered timing
     tl.from(".circle-1", { 
       scale: 0, 
-      duration: 1.5,
-      ease: "back.out(1.7)" // Nice bounce effect
+      y: 50,
+      opacity: 0,
+      duration: 1.2,
+      ease: "back.out(1.7)"
     })
     .from(".line-1", { 
-      scaleX: 0, 
-      duration: 0.8,
+      scaleX: 0,
+      duration: 0.7,
       transformOrigin: "center center"
-    }, "-=0.5")
+    }, "-=0.6")
     .from(".text-1", { 
       opacity: 0, 
-      duration: 0.8 
-    }, "-=0.3")
+      y: 20,
+      duration: 0.7 
+    }, "-=0.4")
+
     .from(".circle-2", { 
       scale: 0,
-      duration: 1.5,
-      ease: "back.out(1.7)" 
-    }, "+=0.3")
+      y: 50,
+      opacity: 0,
+      duration: 1.2,
+      ease: "back.out(1.7)"
+    }, "+=0.2")
     .from(".line-2", { 
-      scaleX: 0, 
-      duration: 0.8,
+      scaleX: 0,
+      duration: 0.7,
       transformOrigin: "left center"
-    }, "-=0.5")
+    }, "-=0.6")
     .from(".text-2", { 
       opacity: 0, 
-      y: 10,
-      duration: 0.8 
-    }, "-=0.3")
+      y: 20,
+      duration: 0.7 
+    }, "-=0.4")
+
     .from(".circle-3", { 
       scale: 0, 
-      duration: 1.5,
-      ease: "back.out(1.7)" 
-    }, "+=0.3")
+      y: 50,
+      opacity: 0,
+
+      duration: 1.2,
+      ease: "back.out(1.7)"
+    }, "+=0.2")
     .from(".line-3", { 
       scaleX: 0, 
-      duration: 0.8,
+      duration: 0.7,
       transformOrigin: "center center"
-    }, "-=0.5")
+    }, "-=0.6")
     .from(".text-3", { 
       opacity: 0, 
-      y: 10,
-      duration: 0.8 
-    }, "-=0.3")
-    // Final animation with smoother transitions
+      y: 20,
+      duration: 0.7 
+    }, "-=0.4")
+
+    // Final sequence
     .to(".circle-1", { 
       scale: 7.2, 
       duration: 6,
-      ease: "linear" 
+      ease: "power1.inOut"
     })
     .to([".circle-2", ".circle-3"], { 
-      scale: 0, 
-      duration: 1.5,
-      ease: "linear" 
-    }, "-=1.5")
+      scale: 0,
+      opacity: 0,
+      duration: 1.2,
+      ease: "power2.in"
+    }, "-=1.2")
     .to([".line", ".circle-text"], { 
-      opacity: 0, 
+      opacity: 0,
       duration: 1,
-      ease: "power1.out" 
-    }, "-=1.5").to("body",{
-      backgroundColor: "#2d2b31"
-    }).to(".circle p",{
-      color: "#fff"
-    })
+      ease: "power1.out"
+    }, "-=1")
+    .to("body", {
+      backgroundColor: "#2d2b31",
+      duration: 1.5
+    }, "-=1")
+    .to(".circle p", {
+      color: "#fff",
+      duration: 1.2
+    }, "-=1");
   },
 
-  // Mobile version with simplified but still smooth animation
-  "(max-width: 767px)": function () {
-    let tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: ".page3",
-        start: "10% top",
-        end: "bottom bottom",
-        scrub: 1.5, 
-        pin: true,
-      },
-      defaults: {
-        ease: "linear"
-      }
-    });
+"(max-width: 767px)": function () { 
+  let tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: ".page3",
+      start: "top top",
+      end: "+=200%", // ⬅ way more scroll distance
+      scrub: 2.5,    // ⬅ slower mapping of scroll to animation
+      pin: true
+    },
+  });
 
-    tl.from(".circle-1", { 
-      scale: 0,  
-      duration: 1.5,
-      ease: "back.out(1.7)" 
+  tl.from(".circle-1", { 
+      scale: 0, 
+      opacity: 0, 
+      duration: 3 // ⬅ longer duration
     })
     .from(".circle-2", { 
       scale: 0, 
-      duration: 1.5,
-      ease: "back.out(1.7)" 
-    }, "+=0.5")
+      opacity: 0, 
+      duration: 3 
+    }, "+=0.5") // small delay for pacing
     .from(".circle-3", { 
       scale: 0, 
-      duration: 1.5,
-      ease: "back.out(1.7)" 
+      opacity: 0, 
+      duration: 3 
     }, "+=0.5")
     .to(".circle-1", { 
-      scale: 4.2,
-      duration: 2,
-      ease: "linear" 
-    }).to("body",{
-      // backgroundColor: "#2d2b31"
-    })
-  }
+      scale: 4.2, 
+      duration: 10, // ⬅ slower expansion
+      ease: "power1.inOut" 
+    }, "+=1");
+}
+
 });
 
-// Enhanced text splitting animation
-
+// ✨ Text Animation
 const splitTarget = document.getElementById("split-target");
 
 ScrollTrigger.matchMedia({
-  // Desktop only
   "(min-width: 768px)": function () {
-    const split = new SplitText(splitTarget, { type: "words" });    
-  
-  gsap.to(split.words, {
-    color: "#fff",
-    stagger: 0.1,
-    scrollTrigger: {
-      trigger: ".page4",
-      start: "",
-      // end: "bottom bottom",
-      scrub: true,
-      // markers: true,
-      pin: true
-    
-    }
-  });
+    const split = new SplitText(splitTarget, { type: "words" });
+
+    gsap.to(split.words, {
+      color: "#fff",
+      opacity: 0.8,
+      stagger: 0.3,
+      ease: "power3.out",
+      scrollTrigger: {
+        trigger: ".page4",
+        start: "top top",
+        scrub: true,
+        pin: true
+      }
+    });
   }
 });
-
-  
