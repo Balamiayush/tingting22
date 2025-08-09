@@ -138,7 +138,6 @@ ScrollTrigger.matchMedia({
       ease: "power1.inOut" 
     }, "+=1").to(".circle p",{
       opacity: 0
-      
     })
 }
 
@@ -153,14 +152,14 @@ ScrollTrigger.matchMedia({
 
     gsap.to(split.words, {
       color: "#fff",
-      opacity: 0.8,
       stagger: 0.3,
       ease: "power3.out",
       scrollTrigger: {
         trigger: ".page4",
-        start: "top top",
+        start: "-20% top",
         scrub: true,
-        pin: true
+        pin: true,
+        markers: 1
       }
     });
   }
