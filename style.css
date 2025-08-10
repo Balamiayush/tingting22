@@ -121,7 +121,7 @@ body {
 
         .page3 {
             width: 100%;
-            height: 90vh;
+            height: 100vh;
             position: relative;
             display: flex;
             flex-direction: column;
@@ -158,21 +158,21 @@ body {
 
         .circle-1 {
             width: 100%;
-            height: 65vh;
+            height: 100%;
             background-color: #2d2b31;
             z-index: 1;
         }
 
         .circle-2 {
             width: 75%;
-            height: 55vh;
+            height: 75%;
             background-color: #f6491d;
             z-index: 2;
         }
 
         .circle-3 {
             width: 50%;
-            height: 40vh;
+            height: 50%;
             background-color: #d9f74b;
             z-index: 3;
         }
@@ -190,7 +190,7 @@ body {
             width: 50%;
         }
         .line-3 {
-            width: 110px;
+            width: 100px;
             left: 120%;
             top: 50%;
         }
@@ -202,8 +202,8 @@ body {
         }
 
         .text-1 {
-            left: 122%;
-            top: 17%;
+            left: 123%;
+            top:16%;
         }
 
         .text-2 {
@@ -212,7 +212,7 @@ body {
         }
 
         .text-3 {
-            left: 145%;
+            left: 140%;
             top: 45%;
             width: 200px;
         }
