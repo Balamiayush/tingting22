@@ -111,7 +111,7 @@ ScrollTrigger.matchMedia({
     scrollTrigger: {
       trigger: ".page3",
       start: "top top",
-      end: "+=250%", // extra scroll for smoother pacing
+      end: "+=230%", // extra scroll for smoother pacing
       scrub: 2.5,
       pin: true
     },
