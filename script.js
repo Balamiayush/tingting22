@@ -111,34 +111,58 @@ ScrollTrigger.matchMedia({
     scrollTrigger: {
       trigger: ".page3",
       start: "top top",
-      end: "+=200%", // ⬅ way more scroll distance
-      scrub: 2.5,    // ⬅ slower mapping of scroll to animation
+      end: "+=250%", // extra scroll for smoother pacing
+      scrub: 2.5,
       pin: true
     },
   });
 
+  // Appear animations
   tl.from(".circle-1", { 
       scale: 0, 
       opacity: 0, 
-      duration: 3 // ⬅ longer duration
+      duration: 3, 
+      ease: "power2.out"
     })
     .from(".circle-2", { 
       scale: 0, 
       opacity: 0, 
-      duration: 3 
-    }, "+=0.5") // small delay for pacing
+      duration: 3, 
+      ease: "power2.out"
+    }, "+=0.8") // delay between appearances
     .from(".circle-3", { 
       scale: 0, 
       opacity: 0, 
-      duration: 3 
-    }, "+=0.5")
+      duration: 3, 
+      ease: "power2.out"
+    }, "+=0.8")
+
+    // Disappear animations
+    .to(".circle-3", {
+      scale: 0,
+      opacity: 0,
+      duration: 3,
+      ease: "power2.in"
+    }, "+=1")
+    .to(".circle-2", {
+      scale: 0,
+      opacity: 0,
+      duration: 3,
+      ease: "power2.in"
+    }, "+=0.8")
+
+    // Final expansion of circle-1
     .to(".circle-1", { 
       scale: 5, 
-      duration: 10, // ⬅ slower expansion
+      duration: 10,
       ease: "power1.inOut" 
-    }, "+=1").to(".circle p",{
-      opacity: 0
-    })
+    }, "+=1")
+
+    // Fade out all text
+    .to(".circle p", {
+      opacity: 0,
+      duration: 1
+    }, "<");
 }
 
 });

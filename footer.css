@@ -3004,7 +3004,8 @@ p {
 .footer {
     padding-top: 40px;
     padding-bottom: 18px;
-    position: relative
+    position: relative;
+    max-height: 40vh;
 }
 
 .image-2 {
