@@ -180,7 +180,7 @@ ScrollTrigger.matchMedia({
       ease: "power3.out",
       scrollTrigger: {
         trigger: ".page4",
-        start: "-25% top",
+        start: "-20% top",
         scrub: true,
         // markers:1,
         pin: true,
